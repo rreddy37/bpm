@@ -26,11 +26,10 @@ const appRoutes: Routes = [
     HeaderComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
