@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">
-      <i class="fa fa-television" aria-hidden="true"></i> Batch Process Monitoring
+<div class="nav-bars-container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a href="/"  class="navbar-brand">
+      <img id="logoImage" width="" class="logoImage" alt="Oracle Logo" title="Oracle Logo" src="assets/img/oracle-white.svg" style="width: 140px;height: 18px;
+  "> &nbsp;Batch Process Monitoring
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbar-menu"
@@ -10,44 +12,47 @@
     </button>
     <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item" ui-sref-active="active" data-toggle="collapse"
-          data-target="#navbar-menu" aria-expanded="false">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-snowflake-o" aria-hidden="true"></i>&nbsp;Cluster
-          </a>
-        </li>
-        <li class="nav-item" ui-sref-active="active" data-toggle="collapse"
-          data-target="#navbar-menu" aria-expanded="false">
-          <a class="nav-link" ui-sref="batchjobs">
-            <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>&nbsp;BatchJobs
-          </a>
-        </li>
-        <li class="nav-item" ui-sref-active="active" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;Nodes
-          </a>
-        </li>
-        <li class="nav-item active" ui-sref-active="active" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-bell" aria-hidden="true"></i>&nbsp;
-          </a>
-        </li>
-        <li class="nav-item active" ui-sref-active="active" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-gear" aria-hidden="true"></i>&nbsp;
-          </a>
-        </li>
-        <li class="nav-item active" ui-sref-active="active" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;
-          </a>
-        </li>
-        <li class="nav-item active" ui-sref-active="active" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
-          <a class="nav-link" ui-sref="user">
-            <i class="fa fa-user" aria-hidden="true"></i>&nbsp;Guest
-          </a>
-        </li>
-      </ul>
+          <li class="nav-item" [routerLinkActive]="['active']" data-toggle="collapse"
+            data-target="#navbar-menu" aria-expanded="false">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-snowflake-o" aria-hidden="true"></i>&nbsp;Cluster
+            </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" data-toggle="collapse"
+            data-target="#navbar-menu" aria-expanded="false">
+            <a class="nav-link" [routerLink]="['batchjobs']">
+              <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>&nbsp;BatchJobs
+            </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;Nodes
+            </a>
+          </li>
+          <li class="nav-item active" [routerLinkActive]="['active']" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-bell" aria-hidden="true"></i>&nbsp;
+            </a>
+          </li>
+          <li class="nav-item active" [routerLinkActive]="['active']" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-gear" aria-hidden="true"></i>&nbsp;
+            </a>
+          </li>
+          <li class="nav-item active" [routerLinkActive]="['active']" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;
+            </a>
+          </li>
+          <li class="nav-item active" [routerLinkActive]="['active']" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
+            <a class="nav-link" [routerLink]="['user']">
+              <i class="fa fa-user" aria-hidden="true"></i>&nbsp;Guest
+            </a>
+          </li>
+        </ul>
     </div>
   </nav>
-  
+  <!--<nav class="navbar navbar-expand-lg bpm-navbar">
+      place holder for second navbar if required
+    </nav>-->
+</div>
