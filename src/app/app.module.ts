@@ -1,34 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+// App Component
 import { AppComponent } from './app.component';
+
+// routing declarations
+import { routing } from './app.routing';
+
+// Other Base Path components 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
-const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-},
-  {
-      path: 'home',
-      component: HomeComponent
-  }
-];
+import { BatchjobsComponent } from './batchjobs/batchjobs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    BatchjobsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
