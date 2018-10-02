@@ -14,6 +14,9 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BatchjobsComponent } from './batchjobs/batchjobs.component';
 
+// services
+import {BatchjobsService} from './_services/index'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,9 @@ import { BatchjobsComponent } from './batchjobs/batchjobs.component';
     HttpClientModule,
     routing
   ],
-  providers: [],
+  providers: [
+    BatchjobsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
