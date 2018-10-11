@@ -14,26 +14,20 @@ export class BatchjobsComponent implements OnInit {
 
   ngOnInit() {
     // call service method 
-    this.batchjobsService.getBatchjobs(this.model.arg1, this.model.arg2)
-      .subscribe(
-        data => {
-          // success response
-          // do whatever you want for success response
-        },
-        error => {
-          // failure response
-          // do whatever you want for failure response
-        }
-      );
 
-      this.batchjobsService.sample().subscribe(
-        data => {
+     this.batchjobsService.login().subscribe(
+       data=>{this.batchjobsService.getAuthToken().subscribe(
+        data1 => {
           console.log('in batchjobs component.. sample() called.. below is data');
-          console.dir(data);
+          console.dir(data1);
+          //console.log(data1.valueOf('OUAF-Security-Token'));
         }, error => {
           console.log('call failed!!');
         }
-      );
+      );},
+       error=>{}
+     );
+      
   }
 
 }
