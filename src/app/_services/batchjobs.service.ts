@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
+import {RestConstants} from '../_constants/index';
 
 @Injectable()
 export class BatchjobsService {
@@ -10,7 +11,7 @@ export class BatchjobsService {
 
   getBatchjobs(arg1val: string, arg2val: string) {
 
-    return this.http.post<any>('/spl/batchjobs', { arg1: arg1val, arg2: arg2val }).map(data => {
+    return this.http.post<any>(RestConstants.API_ENDPOINT+'/spl/batchjobs', { arg1: arg1val, arg2: arg2val }).map(data => {
       return data;
     });
   }
@@ -21,13 +22,13 @@ export class BatchjobsService {
    }
 
 login() {
-    return this.http.post("/spl/j_security_check?j_username=VIJAYJAI&j_password=APFG9bPB",{headers:this.getHeaders()}).map(data => {
+    return this.http.post(RestConstants.API_ENDPOINT+"/spl/j_security_check?j_username=VIJAYJAI&j_password=APFG9bPB",{headers:this.getHeaders()}).map(data => {
       return data;
     });
   }
 
 getAuthToken() {
-  return this.http.get('/spl/restSecurityToken',{headers:this.getHeaders()}).map(data =>{
+  return this.http.get(RestConstants.API_ENDPOINT+'/spl/restSecurityToken',{headers:this.getHeaders()}).map(data =>{
     return data;
   })
 };    
